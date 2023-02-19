@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+		<!--Para que en el navegador se vea siempre en el mismo tamaño-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--Título que se verá en la pestaña de la página-->
+		<title>Ranked Players League</title>
+		<link rel="stylesheet" href="style.css">
+		<!--Icono de la pestaña de la página-->
+		<link rel="shortcut icon" href="imagenes/favicon.ico">
+    </head>
+	
+	<body>
+	
+		<!--Encabezado de la página que se mostrará fijo y contendrá el logo y la barra de navegación-->
+		<header class="encabezado">
+			<!--Este checkbox nos va a servir para hacer un navegador desplegable en versión móvil-->
+			<input type="checkbox" id="menu"/>
+			<label class="boton" for="menu">
+				<div></div>
+			</label>
+			<!--Logo de la página, si hacemos clic nos lleva a la página principal-->
+			<a href="index.html" class="logo">
+				<img src="imagenes/logo.png" alt="RPL Logotipo">
+			</a>
+			<!--Barra de navegación con las 4 páginas html, tendrá animaciones y se marcará la página actual con la clase 'activo'-->
+			<nav class="navegador">
+				<ul >
+					<li><a class="activo" href="index.html">Inicio</a></li>
+					<li><a href="lol.html">League of Legends</a></li>
+					<li><a href="smash.html">Super Smash Bros. Ultimate</a></li>
+					<li><a href="contacto.html">¡Únete!</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<!--Main de la página que contendrá los artículos principales y se mostrará a la izquierda-->
+		<main>
+			<section>
+				<article>
+					<h1>
+						¿Qué es RPL Ranked Players League?
+					</h1>
+					<figure class="mapa">
+						<img src="imagenes/mapa.jpg" alt="Localización RPL">
+					</figure>
+					<p>
+						<em>RPL Ranked Players League</em> nace en la ciudad de Sevilla como un
+						proyecto destinado a organizar competiciones de videojuegos de forma
+						presencial.
+					<br>
+					<br>
+						Tras unos años, la organización va avanzando y comienza la
+						retransmisión de forma online de dichas competiciones.
+					<br>
+					<br>
+						Más tarde dará el paso al mundo Esport Amateur, logrando acuerdos
+						con varios clubes y organizaciones, llegando a organizar competiciones
+						propias de forma online.
+					<br>
+					<br>
+						Actualmente, <em>RPLeague</em> ofrece varios servicios que se comentarán más
+						adelante, los cuales abarcan desde el casteo y retransmisión de
+						partidas, hasta organización y desarrollo de competiciones, online o
+						presencial.
+					</p>
+				</article>
+				<article>
+					<h1>
+						Nuestros Proyectos
+					</h1>
+					<p>
+						<em>RPLeague</em> se encuentra en pleno crecimiento, siendo 2019 y 2020 los
+						años donde mayor importancia comienza a tomar.
+					<br>
+					<br>
+						En apenas unos meses todo la organización pasó de ceñirse al panorama
+						local (Sevilla y alrededores) a estar situada como una de las ligas más
+						importantes de <em>League Of Legends</em>, así como logrando un crecimiento
+						exponencial en relación a los espectadores de los canales de varias
+						plataformas (Twitch y Youtube principalmente).
+					<br>
+					<br>
+						Nos gustaría detallar algunos de nuestros proyectos de forma más
+						específica, dedicándoles un apartado a cada uno de ellos para poder
+						explicar en qué se basan y cuales son los objetivos.
+					</p>
+					<figure class="proyectos">
+						<img src="imagenes/rift.png" alt="Rift Logotipo">
+						<img src="imagenes/podcast.png" alt="Podcast Logotipo">
+						<img src="imagenes/goldencup.png" alt="GoldenCup Logotipo">
+					</figure>
+				</article>
+			</section>
+		</main>
+		
+		<!--Aside que se mostrará fijo que contendrá imágenes con los enlaces a las redes sociales-->
+		<aside>
+			<h1> 
+				¡Síguenos en nuestras redes sociales!
+			</h1>
+			<figure class="redes">
+				<a href="https://twitter.com/RankedPlayers" class="twitter">
+					<img src="imagenes/twitter.png" alt="Twitter">
+				</a>
+				<a href="https://www.twitch.tv/rpleague" class="twitch">
+					<img src="imagenes/twitch.png" alt="Twitch">
+				</a>
+				<a href="https://www.youtube.com/channel/UCw81gdNycNkzSEzYVM7GIBw" class="youtube">
+					<img src="imagenes/youtube.png" alt="Youtube">
+				</a>
+			</figure>
+		</aside>
+		
+		<!--Pie de la página que se mostrará siempre al final-->
+        <footer>
+			&copy; 2014 Ranked Players League. All rights reserved.
+		</footer>
+		
+    </body>
+	
+</html>

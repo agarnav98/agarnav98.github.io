@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+		<!--Para que en el navegador se vea siempre en el mismo tamaño-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--Título que se verá en la pestaña de la página-->
+		<title>Ranked Players League</title>
+		<link rel="stylesheet" href="style.css">
+		<!--Icono de la pestaña de la página-->
+		<link rel="shortcut icon" href="imagenes/favicon.ico">
+    </head>
+
+	<body>
+	
+		<!--Encabezado de la página que se mostrará fijo y contendrá el logo y la barra de navegación-->
+		<header class="encabezado">
+			<!--Este checkbox nos va a servir para hacer un navegador desplegable en versión móvil-->
+			<input type="checkbox" id="menu"/>
+			<label class="boton" for="menu">
+				<div></div>
+			</label>
+			<!--Logo de la página, si hacemos clic nos lleva a la página principal-->
+			<a href="index.html" class="logo">
+				<img src="imagenes/logo.png" alt="RPL Logotipo">
+			</a>
+			<!--Barra de navegación con las 4 páginas html, tendrá animaciones y se marcará la página actual con la clase 'activo'-->
+			<nav class="navegador">
+				<ul >
+					<li><a href="index.html">Inicio</a></li>
+					<li><a class="activo" href="lol.html">League of Legends</a></li>
+					<li><a href="smash.html">Super Smash Bros. Ultimate</a></li>
+					<li><a href="contacto.html">¡Únete!</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<!--Main de la página que contendrá los artículos principales y se mostrará a la izquierda-->
+		<main>
+			<section>
+				<article>
+					<h1>
+						El videojuego más jugado del mundo
+					</h1>
+					<figure class="lol">
+						<img src="imagenes/lol.png" alt="League of Legends Logotipo">
+					</figure>
+					<p>
+						<em>League of Legends</em> (también conocido por sus siglas <em>LoL</em>) es un videojuego del género multijugador de arena de batalla en línea (MOBA)
+						y deporte electrónico el cual fue desarrollado por Riot Games para Microsoft Windows y OS X y para consolas digitales.
+						un principio los servidores estaban alojados en la empresa GOA y fue vendida a la empresa china Tencent Holdings Limited.
+					<br>
+					<br>
+						El juego consta de 3 modos actuales de juego en ejecución: La Grieta del Invocador, El Abismo de los Lamentos y Teamfight Tactics.​Los jugadores compiten en partidas,
+						que duran entre 15 y 50 minutos en promedio. En cada modo de juego, los equipos trabajan juntos para lograr una condición de victoria,
+						normalmente destruyendo la estructura central (llamado Nexo) en la base del equipo enemigo después de pasar por alto una línea de estructuras defensivas llamadas Torretas.
+						En todos los modos de juego, los jugadores controlan personajes llamados «campeones», elegidos o asignados en cada partida,
+						que tienen un conjunto de habilidades únicas, con los cuales jugarán toda la partida hasta su conclusión.
+					<br>
+					<br>
+						<em>League of Legends</em> tiene lugar en el mundo ficticio de Runaterra. Los personajes, mejor conocidos como campeones,
+						son una colección de héroes y villanos que tienen una variedad de historias,
+						a menudo relacionadas con las luchas políticas de los diversos países del continente principal de Valoran.
+						Además, algunos campeones son extraplanares y provienen de mundos diferentes a Runaterra, pero están de visita para sus propios fines.
+						Estos campeones a veces chocan entre sí, lo cual se ve reflejado en la jugabilidad de <em>League of Legends</em>.
+					</p>
+					<figure class="grieta">
+						<img src="imagenes/grieta.jpg" alt="Mapa del Videojuego">
+					</figure>
+				</article>
+				<article>
+					<h1>
+						Impulsor de los e-Sports
+					</h1>
+					<p>
+						Existen multitud de ligas y torneos de <em>League of Legends</em>, algunos organizados por Riot Games, otros por terceros con respaldo oficial, y otros independientes.
+						Aquellos organizados o con respaldo oficial de Riot Games podrían resumirse en el Torneo Mundial,
+						para el que se clasifican los mejores equipos de cada continente; los torneos de Tier 1,
+						en los que se deciden los equipos de cada región que irán al mundial (como la LEC en Europa);
+						y los torneos nacionales de Tier 2, que dependiendo de la región/continente, pueden tener categoría Challenger para promocionar a la Tier 1
+						(como la League of Legends Challenger de Corea) o puntuar para torneos independientes (como la SLO de España, que permite aspirar a participar en la European Masters).
+					</p>
+					<!--Tabla que unirá los logos de los equipos con su nombre-->
+					<table class="equipos">
+						<!--Título que aparece en la tabla-->
+						<caption>Equipos de la liga española "Superliga LVP"</caption>
+						<tr>
+							<td><img src="imagenes/club/giants.png" alt="Giants Logotipo"></td>
+							<td>Giants Gaming</td>
+							<td><img src="imagenes/club/fnatic.png" alt="Fnatic TQ Logotipo"></td>
+							<td> Fnatic TQ</td>
+						</tr>
+						<tr>
+							<td><img src="imagenes/club/g2.png" alt="G2 Logotipo"></td>
+							<td>G2 Artic</td>
+							<td><img src="imagenes/club/heretics.png" alt="Heretics Logotipo"></td>
+							<td>Team Heretics</td>
+						</tr>
+						<tr>
+							<td><img src="imagenes/club/mad.png" alt="MAD Lions Logotipo"></td>
+							<td>MAD Lions Madrid</td>
+							<td><img src="imagenes/club/bisons.png" alt="Bisons Logotipo"></td>
+							<td>Bisons Eclub</td>
+						</tr>
+						<tr>
+							<td><img src="imagenes/club/movistar.png" alt="Movistar Riders Logotipo"></td>
+							<td>Movistar Riders</td>
+							<td><img src="imagenes/club/barca.png" alt="Barça Esports Logotipo"></td>
+							<td>Barça Esports</td>
+						</tr>
+						<tr>
+							<td><img src="imagenes/club/koi.png" alt="KOI Logotipo"></td>
+							<td> Finetwork KOI</td>
+							<td><img src="imagenes/club/ucam.png" alt="UCAM Esports Logotipo"></td>
+							<td>UCAM Esports</td>
+						</tr>						
+					</table>
+				</article>
+				<article>
+					<h1>
+						Rift Players League
+					</h1>
+					<figure class="rift">
+							<img src="imagenes/rift.png" alt="Rift Logotipo">
+					</figure>
+					<p>
+						<em>Rift Players League</em> es nuestro proyecto insignia y más ambicioso, por
+						lo que ahora mismo abarca todos nuestros esfuerzos.
+					<br>
+					<br>
+						Consiste en una competición (liga) online de <em>League Of Legends</em>, siendo
+						llamada a ser la competición referencia para el sector amateur dentro
+						de la comunidad. Como prueba del crecimiento, en más de un año desde
+						el inicio de la primera temporada de la liga, la competición ha pasado de
+						alojar 8 equipos a incluir hasta más de 40 equipos divididos en tres o
+						más divisiones.
+					<br>
+					<br>
+						No obstante, dado que es un proyecto ambicioso, se pretende atraer aún
+						más equipos, marcas y jugadores, convirtiéndonos en la competición
+						ideal y objetivo para todo club amateur en nuestro país.
+					</p>
+				</article>				
+			</section>
+		</main>
+		
+		<!--Aside que se mostrará fijo que contendrá imágenes con los enlaces a las redes sociales-->
+		<aside>
+			<h1> 
+			¡Síguenos en nuestras redes sociales!
+			</h1>
+			<figure class="redes">
+				<a href="https://twitter.com/RankedPlayers" class="twitter">
+					<img src="imagenes/twitter.png" alt="Twitter">
+				</a>
+				<a href="https://www.twitch.tv/rpleague" class="twitch">
+					<img src="imagenes/twitch.png" alt="Twitch">
+				</a>
+				<a href="https://www.youtube.com/channel/UCw81gdNycNkzSEzYVM7GIBw" class="youtube">
+					<img src="imagenes/youtube.png" alt="Youtube">
+				</a>
+			</figure>
+		</aside>
+		
+		<!--Pie de la página que se mostrará siempre al final-->
+        <footer>
+			&copy; 2014 Ranked Players League. All rights reserved.
+		</footer>
+		
+    </body>
+	
+</html>

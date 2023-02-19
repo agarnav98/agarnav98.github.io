@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+		<!--Para que en el navegador se vea siempre en el mismo tamaño-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--Título que se verá en la pestaña de la página-->
+		<title>Ranked Players League</title>
+		<link rel="stylesheet" href="style.css">
+		<!--Icono de la pestaña de la página-->
+		<link rel="shortcut icon" href="imagenes/favicon.ico">
+    </head>
+	
+	<body>
+	
+		<!--Encabezado de la página que se mostrará fijo y contendrá el logo y la barra de navegación-->
+		<header class="encabezado">
+			<!--Este checkbox nos va a servir para hacer un navegador desplegable en versión móvil-->
+			<input type="checkbox" id="menu"/>
+			<label class="boton" for="menu">
+				<div></div>
+			</label>
+			<!--Logo de la página, si hacemos clic nos lleva a la página principal-->
+			<a href="index.html" class="logo">
+				<img src="imagenes/logo.png" alt="RPL Logotipo">
+			</a>
+			<!--Barra de navegación con las 4 páginas html, tendrá animaciones y se marcará la página actual con la clase 'activo'-->
+			<nav class="navegador">
+				<ul >
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="lol.html">League of Legends</a></li>
+					<li><a class="activo" href="smash.html">Super Smash Bros. Ultimate</a></li>
+					<li><a href="contacto.html">¡Únete!</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<!--Main de la página que contendrá los artículos principales y se mostrará a la izquierda-->
+		<main>
+			<section>
+			<article>
+					<h1>
+						Una de las comunidades más grandes de España
+					</h1>
+					<figure class="smash">
+						<img src="imagenes/smash.png" alt="Super Smash Bros Logotipo">
+					</figure>
+					<p>
+						<em>Super Smash Bros. Ultimate</em> es un videojuego de lucha desarrollado por Sora Ltd. y Bandai Namco Entertainment y distribuido por Nintendo
+						para la consola Nintendo Switch. Fue lanzado a nivel mundial el 7 de diciembre de 2018
+						y se trata del quinto título de la serie <em>Super Smash Bros</em>.
+					<br>
+					<br>
+						Igual que sus predecesores, se trata de un juego de lucha donde hay que debilitar a los rivales para expulsarles de los márgenes del escenario.
+						El plantel está formado por personajes de otros videojuegos, tanto de Nintendo como de otras desarrolladoras independientes, e incluye a todos los combatientes de entregas anteriores.
+						El título admite hasta ocho jugadores en modo local, se puede jugar en línea a través de Nintendo Switch Online, y es compatible con las figuras Amiibo y con Nintendo Labo.
+					<br>
+					<br>
+						<em>Super Smash Bros. Ultimate</em> tiene una de las mayores comunidades de jugadores en línea en Nintendo Switch, así que se han desarrollado campeonatos oficiales a distintos niveles.
+						Nintendo apoya la organización de estos eventos pero no suele aportar dinero porque no considera que sea prioritario a la hora de jugar, 
+						así que los premios dependen de cada organizador.
+						Ultimate cuenta con una categoría propia en el Evolution Championship Series (EVO), el mayor torneo mundial de videojuegos de lucha.
+						El primer torneo con categoría de Ultimate fue el EVO 2019, en el que participaron 3534 jugadores de nivel competitivo
+						y que contó con una audiencia de 279.000 espectadores en Twitch durante la fase final.
+					</p>
+					<figure class="plantel">
+						<img src="imagenes/plantel.jpg" alt="Plantel de personajes">
+					</figure>
+				</article>
+				<article>
+					<h1>
+						Smash Bros. Spain
+					</h1>
+					<p>
+						Smash Bros. Spain es una gran comunidad española para los amantes del videojuego
+						que reune a jugadores de diversas regiones para organizar eventos competitivos.
+						Desde sus inicios con <em>Super Smash Bros. Brawl</em> en 2012, la comunidad ha ido creciendo
+						con el paso de los años, llegando a tener 330 participantes del todo el mundo
+						en su reciente torneo Glory 2.0 en Barcelona
+					<br>
+					<br>
+						Esta centralización de una comunidad nacional es posible gracias al trabajo de los organizadores
+						de torneos en cada municipio. Sevilla cuenta con una gran comunidad de jugadores que compiten cada
+						mes, más información en <a class="enlaceSmash" href="https://twitter.com/smashsevilla">Twitter</a>
+					</p>
+					<figure class="smashNacional">
+						<img class="smashSpain" src="imagenes/smashSpain.png" alt="Smash Bros. Spain Logotipo">
+						<img class="smashSevilla"src="imagenes/smashSevilla.png" alt="Smash Bros. Sevilla Logotipo">
+					</figure>
+				</article>
+			</section>
+		</main>
+		
+		<!--Aside que se mostrará fijo que contendrá imágenes con los enlaces a las redes sociales-->
+		<aside>
+			<h1> 
+			¡Síguenos en nuestras redes sociales!
+			</h1>
+			<figure class="redes">
+				<a href="https://twitter.com/RankedPlayers" class="twitter">
+					<img src="imagenes/twitter.png" alt="Twitter">
+				</a>
+				<a href="https://www.twitch.tv/rpleague" class="twitch">
+					<img src="imagenes/twitch.png" alt="Twitch">
+				</a>
+				<a href="https://www.youtube.com/channel/UCw81gdNycNkzSEzYVM7GIBw" class="youtube">
+					<img src="imagenes/youtube.png" alt="Youtube">
+				</a>
+			</figure>
+		</aside>
+		
+		<!--Pie de la página que se mostrará siempre al final-->
+        <footer>
+			&copy; 2014 Ranked Players League. All rights reserved.
+		</footer>
+		
+    </body>
+	
+</html>

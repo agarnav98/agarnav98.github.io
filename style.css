@@ -1,0 +1,444 @@
+/*Body de la página, se especifica el tipo de letra, color, interlineado, margen... Por defecto*/
+body {
+	font-family: Helvetica, Arial, Sans-serif; /*Si no carga la primera fuente, lo hará la siguiente*/
+	color: #333;
+	line-height: 1.7rem;
+	margin: 0;
+
+/*Fondo de la página que será una imagen, si esta no carga, aparecerá un color*/
+	background-image: url(imagenes/fondo.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover; 
+	background-color: #5E5A5A;
+}
+
+/*Header de la página, será fijo y estará siempre arriba*/
+header {
+	background-color: #222220; 
+	display: flex; 
+	justify-content: space-between; /*Para separar el logo del nav*/
+	align-items: center; /*Centramos los elementos*/
+	height: 80px;
+	border-radius: 18px; /*Para redondear los bordes*/
+	position: fixed;
+	/*Posición del header*/
+	left: 0;
+	top: 0;
+	right: 0;
+}
+	/*Hacemos que todos los enlaces se vean blancos y sin subrayado*/
+	header a { 
+		color: white;
+		text-decoration: none;
+		font-size: 1.2rem;
+		font-family: Verdana;
+		cursor: pointer; /*Cuando señalamos en un enlace cambia el icono del raton*/
+	}
+
+	/*Ajustamos la imagen del logo en ancho y altura*/
+	header a img { 
+		padding-top: 13.5px;
+		padding-left: 30px;
+		width: 178px;
+	}
+
+/*Barra de navegación*/
+	nav {
+		padding-right: 15px;
+	}
+	
+	/*Quitamos de la lista el margen, los elementos de lista, relleno*/
+	nav ul { 
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	/*Para que se vea cada pestaña una al lado de la otra*/
+	nav li {
+		display: inline-block; 	
+	}
+	
+	/*Ajustamos el tamaño de los enlaces del nav y los redondeamos*/
+	nav li a { 
+		display: block;
+		padding: 1.65rem 1.5rem; 
+		transition: all 0.4s linear; /*Efecto al pasar encima de la pestaña*/
+		border-radius: 50px;
+	}
+	
+	/*Color al pasar por encima de las pestañas no actuales*/
+	nav li a:hover:not(.activo) { 
+		background-color: #383836;
+	}
+
+	/*Color al pasar por encima de la pestaña actual*/
+	nav li a:hover { 
+		background-color: #a2182f;	
+	}
+
+	/*Color de la pestaña actual*/
+	.activo { 
+		background-color: #851b2b;
+	}
+
+/*Main de la página*/
+main {
+	padding-top: 6rem; /*Margen para separar el Header del Main*/
+}
+
+/*Section por defecto de la página*/
+	section {
+		float: left;
+		width: 70%;
+		margin:20px;
+		padding: 8px;
+		background-color:#222220;
+		border-radius: 18px;
+	}
+	
+/*Article por defecto de la página*/
+	article {
+		background-color:white;
+		margin:20px;
+		padding: 8px;
+		border-radius: 18px;
+	}
+
+/*Formato por defecto de los párrafos y títulos dentro del section*/
+	section h1 {
+		margin-left: 10px;
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+	
+	section p {
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 1.4rem;
+		text-align: justify;
+	}
+	
+/*Imágenes de los artículos del Main, donde estableceremos su formato y su posición*/
+	.mapa img {
+		display: block;
+		float: right;
+		width: 29%;
+		min-width: 150px;
+		max-width: 345px;
+		padding-left: 20px;
+		margin: auto;
+		border-radius: 50px;
+	}
+	
+	.proyectos {
+		display: flex;
+		justify-content: space-around; /*Separamos las 3 imágenes*/
+	}
+
+	.proyectos img {
+		width: 20%;
+		min-width: 50px;
+		padding: 10px;
+	}
+	
+	.lol img {
+		display: block;
+		margin: auto;
+		width: 50%;
+		min-width: 150px;
+	}
+	
+	.grieta img {
+		display: block;
+		margin:  auto;
+		width: 45%;
+		min-width: 150px;
+		border-radius: 50px;
+		
+	}
+	
+	.equipos img {
+		width: 50px;
+	}
+	
+	.rift img {
+		float: right;
+		width: 35%;
+		min-width: 180px;
+		max-width: 220px;
+		padding-left: 25px;
+		margin-right: -25px;	
+	}
+	
+	.smash img {
+		display: block;
+		margin: auto;
+		width: 50%;
+		min-width: 150px;
+	}
+
+	.plantel img {
+		display: block;
+		margin: auto;
+		width: 60%;
+		min-width: 150px;
+		border-radius: 5px;	
+	}	
+	
+	.smashNacional {
+		display: flex;
+		justify-content: space-around;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+
+	.smashSpain {
+		width: 40%;
+		min-width: 50px;
+	}
+
+	.smashSevilla {
+		width: 25%;
+		min-width: 50px;
+	}
+	
+/*Le damos formato al enlace de la página SMASH*/
+.enlaceSmash {
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+}
+	
+/*Definimos el tamaño del video y lo centramos*/
+.videoRPL {
+	width: 560px ; 
+	height: 315px; 
+	margin: auto;
+	display: block;
+}
+	
+/*Le damos formato a la tabla*/
+.equipos {
+	width: 50%;
+	border-style: groove;
+	margin: 20px auto;
+	text-align: left;
+}
+
+	.equipos td {
+		padding: 2%;
+	}
+	
+	.equipos caption {
+		font-weight: bold;
+		font-size: 1.3rem;
+		margin-bottom: 10px;
+	}
+
+/*Section de la página UNETE*/	
+.cartelContenedor {
+	background-color: #222220;
+	color: white;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-family: Verdana; 
+}
+
+	.cartelContenedor p {
+		clear: both;
+	}
+
+	.cartelContenedor a {
+		color: #851b2b;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.cartel {
+		display: flex;
+		justify-content: space-around;
+		margin-right: auto;
+		margin-left: -10px;
+	}
+
+	.cartel img {
+		width: 50%;
+		padding-bottom: 10px;
+		padding-left: 10px;
+	}
+
+/*Aside de la página, que sera fijo y tendra imágenes con enlace a las redes sociales*/
+aside {
+	font-family: Verdana;
+	text-align: center;
+	display: block;
+	position: fixed;
+	margin: 20px 5px 5px 73.5%;
+	padding: 8px;
+	color:white;
+	background-color:#222220;
+	width: 24%;
+	border-radius: 18px;
+}
+
+	aside h1 {
+		font-size: 1.5rem;
+	}
+
+	.redes a {
+		color: white;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	.redes img {
+		padding-right: 5%;
+		padding-left: 5%;
+		width: 20%;
+		min-width: 30px;
+		max-width: 80px;
+	}
+
+/*Hacemos que el pie de página siempre aparezca al final y le damos formato*/
+footer {
+	font-family: Verdana;
+	font-style: italic;
+	margin-left: 32%;
+	margin-right: 32%;
+	text-align: center;
+	clear: both; /*Para que el elemento no este al lado de flotantes y aparezca debajo de todo*/
+	padding: 20px;
+	color: white;
+	background-color: #222220;
+	border-radius: 18px;
+}
+
+/*Menu desplegado par para moviles*/
+#menu:checked ~ nav { /*Especificamos que el checkbox esté pulsado para mostrar el nav*/
+	display: block;
+	margin-top: -15px;
+	width: 100%;
+}
+
+	/*Botón que solo se mostrara en moviles*/
+	.boton { 
+		float: right;
+		margin: 35px 30px;
+		display: none;
+	}
+
+	/*Con esto creamos una línea del botón*/
+	.boton div { 
+		height: 5px;
+		width: 30px;
+		background-color: #851b2b;
+		position: relative;
+	}
+
+	/*Con esto creamos las otras dos líneas del botón, formando el botón completo*/
+	.boton div::before, .boton div::after {
+		background-color: #851b2b;
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	.boton div::before {
+		top: 10px;
+	}
+
+	.boton div::after {
+		top: -10px;
+	}
+
+/*No queremos que el checkbox se vea en la pagina si no es para moviles*/
+#menu { 
+	display: none;
+}
+
+/*Con esto haremos la página responsive, al llegar a cierto tamaño, la página se mostrará en otro formato para móviles*/
+@media (max-width: 1050px) {
+	
+	/*Haremos que el encabezado cuadre con el checkbox*/
+	header {
+		display: block;
+		border-radius: 0;
+	}
+	
+	header a img {
+		padding-top: 7px;
+		padding-left: 10px;
+		width: 159px;
+	}
+	
+	/*Mostramos el botón creado*/
+	.boton { 
+		display: block;
+	}
+	
+	/*Quitamos el navegador que sale en la página completa y lo sustituimos por el botón*/
+	nav { 
+		display: none;
+	}
+	
+	/*Le damos otro formato al navegador de botón, mas adecuado para verlo en móvil*/
+	nav ul {
+		background-color: #222220;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		border-radius: 0px;
+	}
+	
+	nav li {
+		display: block;
+	}
+	
+	nav li a {
+		padding:1rem;
+	}
+
+	/*Extendemos el section a toda la pagina en version móvil*/
+	section {
+		width: 100%;
+		margin: 0px 0px 20px 0px;
+		padding: 0;
+	}
+
+	/*Mostramos los carteles de la página UNETE uno encima del otro*/
+	.cartel {
+		display: block;
+	}
+	
+	.cartel img {
+		width: 100%;
+		max-width: 560px;
+		display: block;
+		margin: auto;
+	}
+	
+	/*El video se mostrará en todo el ancho de la pantalla*/
+	.videoRPL {
+		width: 100% ; 
+		max-width: 565px;
+	}
+	
+	/*Hacemos que el aside se vea debajo del section, más acorde con la version móvil*/
+	aside {
+		clear: both;
+		position: static;
+		padding: 8px 0px;
+		margin:0;
+		width: 100%;	
+	}
+	
+	/*El footer se mostrará en todo el ancho de la página, formato más acorde con la version móvil*/
+	footer {
+		margin: 20px 0px 0px 0px;
+	}
+	
+}
