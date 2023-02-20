@@ -116,7 +116,7 @@ main {
 		border-radius: 18px;
 	}
 	
-/*Article por defecto de la página*/
+/* Article por defecto de la página */
 	article {
 		/* Formato de content */
 		background-color:white;
@@ -368,16 +368,16 @@ footer {
 	margin-left: 10px;
   }
 
-#submit {
-	padding: 8px 16px;
-	border: 1px solid #000;
-	border-radius: 5px;
-	display: block;
-	color: #fff;
-	background-color: #851b2b;
-	cursor: pointer;
-	transition: all 0.4s linear; /* Efecto al pasar encima del botón */
-  }
+	#submit {
+		padding: 8px 16px;
+		border: 1px solid #000;
+		border-radius: 5px;
+		display: block;
+		color: #fff;
+		background-color: #851b2b;
+		cursor: pointer;
+		transition: all 0.4s linear; /* Efecto al pasar encima del botón */
+	}
 
   #submit:hover {
 	background-color: #c91e3a;
@@ -508,7 +508,7 @@ footer {
 		margin: 20px 0px 0px 0px;
 	}
 
-	/* El text area ocupará todo la mitad */
+	/* El text area ocupará todo la página */
 	textarea {
 		width: 100%;
 		max-width: 400px
