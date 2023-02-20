@@ -27,43 +27,102 @@
 			</a>
 			<!--Barra de navegación con las 4 páginas html, tendrá animaciones y se marcará la página actual con la clase 'activo'-->
 			<nav class="navegador">
-				<ul >
+				<ul>
 					<li><a href="index.html">Inicio</a></li>
 					<li><a href="lol.html">League of Legends</a></li>
-					<li><a href="smash.html">Super Smash Bros. Ultimate</a></li>
-					<li><a class="activo" href="contacto.html">¡Únete!</a></li>
+					<li><a href="smash.html">Smash Bros.</a></li>
+					<li><a href="unete.html">¡Únete!</a></li>
+					<li><a class="activo" href="contacto.html">Contacto</a></li>
 				</ul>
 			</nav>
 		</header>
 		
-		<!--Main de la página que contendrá los artículos principales y se mostrará a la izquierda-->
-		<main>
+		<!-- Main de la página que contendrá los artículos principales y se mostrará a la izquierda -->
+		<main>	
 			<section>
-				<article class="cartelContenedor">
-					<!--Se inserta un video de youtube con el formato por defecto que proporciona la misma web-->
-					<iframe class="videoRPL" src="https://www.youtube.com/embed/e0QOLTuhVLo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</article>
-				<article class="cartelContenedor">
-					<figure class="cartel">
-						<img class="cartelRetransmision" src="imagenes/retransmision.png" alt="Cartel Retransmisiones">
-						<img class="cartelContacta" src="imagenes/contacta.png" alt="Cartel Contacta">
-					</figure>
-					<p>
-						Rellena el formulario si quieres formar parte del equipo de casters:
-						<a href="https://docs.google.com/forms/d/1sZgrqD6pxafGrDFFyDIFVzHw3lcL8MTz5ZyrkPndtfg/viewform?edit_requested=true">Formulario Caster</a>
-					</p>
-					<p>
-						Rellena el formulario si quieres formar parte del equipo de árbitros:
-						<a href="https://docs.google.com/forms/d/184I7JNQJ09g8yefyviA4MKJ7ClY1Gq4GU2tn60tlIYE/viewform?edit_requested=true">Formulario Árbitro</a>
-					</p>					
+				<article>
+					<!-- Encabezado -->
+					<h1>Formulario de contacto</h1>
+					<!-- Formulario -->
+					<form>
+						<!-- Cuadros de textos vacíos -->
+						<label class="input" for="nombre">Nombre:</label>
+						<input id="nombre" type ="text" name="nombre"/>
+						<br/>
+						<label class="input" for="apellidos">Apellidos:</label>
+						<input id="apellidos" type ="text" name="apellidos"/>
+						<br/>
+						<label class="input" for="email">Email:</label>
+						<input id="email" type ="text" name="email"/>
+						<!-- Lista desplegable -->
+						<p>
+							Motivo de la consulta:
+							<select name="lista">
+								<option value="" selected>- Seleccione una opción -</option>
+								<option value="ingresar">Cómo ingresar un equipo</option>
+								<option value="quitar">Cómo dar de baja un equipo</option>
+								<option value="normativa">Pregunta sobre la normativa</option>
+								<option value="otro">Otra consulta</option>
+							</select>
+						</p>
+						<!-- Radio para elegir en qué juego compite -->
+						<p>
+							Seleccione el videojuego relacionado con su consulta:
+							<br/>
+							<input  type ="radio" name="videojuego" value="lol"/>
+							<label for="juego1">League of Legends</label>
+							<br/>
+							<input  type ="radio" name="videojuego" value="smash"/>
+							<label for="juego2">Super Smash Bros.</label>
+							<br/>
+							<input  type ="radio" name="videojuego" value="fifa"/>
+							<label for="juego3">FIFA</label>
+							<br/>
+							<input  type ="radio" name="videojuego" value="otro"/>
+							<label for="juego4">Otro juego/consulta</label>
+						</p>
+						<!-- Checkbox para indicar el cargo -->
+						<p>
+							Seleccione su cargo:
+							<br/>
+							<input type="checkbox" name="cargo" value="jugador"/>
+							<label for="checkbox1">Jugador</label>
+							<br/>
+							<input type="checkbox" name="cargo" value="entrenador"/>
+							<label for="checkbox2">Entrenador</label>
+							<br/>
+							<input type="checkbox" name="cargo" value="manager"/>
+							<label for="checkbox3">Manager</label>
+							<br/>
+							<input type="checkbox" name="cargo" value="otro"/>
+							<label for="checkbox4">Otro</label>
+						</p>
+						<!-- Para subir un archivo -->
+						<p>
+							Seleccione un fichero de imagen (jpg, png) si desea renovar el logo de su equipo:
+							<br/>
+							<input type="file" name="fichero" accept=".jpg, .png"/>
+							<br/>
+						</p> 
+						<!-- Área de texto con el motivo de la consulta -->
+						<p>
+							Escriba el motivo de su consulta:
+							<br/>
+							<textarea name="consulta" rows="10" cols="50" style="resize: none;"></textarea>
+						<p>
+						<!-- Botón para enviar el formulario -->
+						<p>
+							<input id="submit" type="submit" name="enviar" value="Enviar"/>
+						</p>
+					</form>					
 				</article>
 			</section>
 		</main>
 		
-		<!--Aside que se mostrará fijo que contendrá imágenes con los enlaces a las redes sociales-->
+		<!-- Aside que contendrá imágenes con los enlaces a las redes sociales-->
 		<aside>
 			<h1> 
-			¡Síguenos en nuestras redes sociales!
+				¡Síguenos en nuestras redes sociales!
 			</h1>
 			<figure class="redes">
 				<a href="https://twitter.com/RankedPlayers" class="twitter">
@@ -78,7 +137,7 @@
 			</figure>
 		</aside>
 		
-		<!--Pie de la página que se mostrará siempre al final-->
+		<!-- Pie de la página que se mostrará siempre al final -->
         <footer>
 			&copy; 2014 Ranked Players League. All rights reserved.
 		</footer>

@@ -1,11 +1,17 @@
-/*Body de la página, se especifica el tipo de letra, color, interlineado, margen... Por defecto*/
+/* Importamos la fuente descargada */
+@font-face {
+	font-family: Helvetica;
+	src: url(fonts/Helvetica/Helvetica.woff);
+  }
+
+/* Body de la página, se especifica el tipo de letra, color, interlineado, margen... Por defecto */
 body {
-	font-family: Helvetica, Arial, Sans-serif; /*Si no carga la primera fuente, lo hará la siguiente*/
+	font-family: Arial, Sans-serif; /* Si no carga la primera fuente, lo hará la siguiente */
 	color: #333;
 	line-height: 1.7rem;
 	margin: 0;
 
-/*Fondo de la página que será una imagen, si esta no carga, aparecerá un color*/
+/* Fondo de la página que será una imagen, si esta no carga, aparecerá un color */
 	background-image: url(imagenes/fondo.png);
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -14,100 +20,117 @@ body {
 	background-color: #5E5A5A;
 }
 
-/*Header de la página, será fijo y estará siempre arriba*/
+/* Aplicamos un estilo a los fragmentos de texto seleccionados por el usuario (Pseudoelemento) */
+*::selection{
+	color:white;
+	background-color: #a2182f;
+}
+
+/* Header de la página, será fijo y estará siempre arriba */
 header {
 	background-color: #222220; 
-	display: flex; 
-	justify-content: space-between; /*Para separar el logo del nav*/
-	align-items: center; /*Centramos los elementos*/
+	display: flex; /* Para que aparezca la imagen al lado del texto */
+	justify-content: space-between; /* Para separar el logo del nav */
+	align-items: center; /* Centramos los elementos */
 	height: 80px;
-	border-radius: 18px; /*Para redondear los bordes*/
+	border-radius: 18px; /* Para redondear los bordes */
 	position: fixed;
-	/*Posición del header*/
+	/* Posición del header */
 	left: 0;
 	top: 0;
 	right: 0;
 }
-	/*Hacemos que todos los enlaces se vean blancos y sin subrayado*/
+	/* Hacemos que todos los enlaces se vean blancos y sin subrayado */
 	header a { 
 		color: white;
 		text-decoration: none;
 		font-size: 1.2rem;
 		font-family: Verdana;
-		cursor: pointer; /*Cuando señalamos en un enlace cambia el icono del raton*/
+		cursor: pointer; /* Cuando señalamos en un enlace cambia el icono del raton */
 	}
 
-	/*Ajustamos la imagen del logo en ancho y altura*/
+	/* Ajustamos la imagen del logo en ancho y altura */
 	header a img { 
 		padding-top: 13.5px;
 		padding-left: 30px;
 		width: 178px;
 	}
 
-/*Barra de navegación*/
+/* Barra de navegación */
+	/* Le damos relleno a la zona derecha */
 	nav {
 		padding-right: 15px;
 	}
 	
-	/*Quitamos de la lista el margen, los elementos de lista, relleno*/
+	/* Quitamos de la lista el margen, los elementos de lista, relleno */
 	nav ul { 
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 	}
 
-	/*Para que se vea cada pestaña una al lado de la otra*/
+	/* Para que se vea cada pestaña una al lado de la otra */
 	nav li {
 		display: inline-block; 	
 	}
 	
-	/*Ajustamos el tamaño de los enlaces del nav y los redondeamos*/
+	/* Ajustamos el tamaño de los enlaces del nav y los redondeamos */
 	nav li a { 
 		display: block;
 		padding: 1.65rem 1.5rem; 
-		transition: all 0.4s linear; /*Efecto al pasar encima de la pestaña*/
+		transition: all 0.4s linear; /* Efecto al pasar encima de la pestaña */
 		border-radius: 50px;
 	}
 	
-	/*Color al pasar por encima de las pestañas no actuales*/
+	/* Con pseudoclases le damos diferentes colores según lo que hagamos con los enlaces */
+	/* Color al pasar por encima de las pestañas no actuales */
 	nav li a:hover:not(.activo) { 
 		background-color: #383836;
 	}
 
-	/*Color al pasar por encima de la pestaña actual*/
+	/* Color al pasar por encima de la pestaña actual */
 	nav li a:hover { 
 		background-color: #a2182f;	
 	}
 
-	/*Color de la pestaña actual*/
+	/* Color de la pestaña actual */
 	.activo { 
 		background-color: #851b2b;
 	}
 
-/*Main de la página*/
+/* Main de la página */
 main {
-	padding-top: 6rem; /*Margen para separar el Header del Main*/
+	padding-top: 6rem; /* Margen para separar el Header del Main */
 }
 
-/*Section por defecto de la página*/
+/* Section por defecto de la página */
 	section {
 		float: left;
 		width: 70%;
 		margin:20px;
 		padding: 8px;
 		background-color:#222220;
+		/* Formato de border */
+		border-style: solid;
+		border-color: #a2182f;
 		border-radius: 18px;
 	}
 	
 /*Article por defecto de la página*/
 	article {
+		/* Formato de content */
 		background-color:white;
+		/* Formato de margin */
 		margin:20px;
-		padding: 8px;
+		/* Formato de padding */
+		padding: 8px;	
+		/* Formato de border */
+		border-style: double;
+		border-color: #851b2b;
 		border-radius: 18px;
 	}
 
-/*Formato por defecto de los párrafos y títulos dentro del section*/
+/* Formato por defecto de los párrafos y títulos dentro del section */
 	section h1 {
 		margin-left: 10px;
 		font-size: 1.5rem;
@@ -121,11 +144,12 @@ main {
 		text-align: justify;
 	}
 	
-/*Imágenes de los artículos del Main, donde estableceremos su formato y su posición*/
+/* Imágenes de los artículos del Main, donde estableceremos su formato y su posición */
 	.mapa img {
-		display: block;
+		display: block; /* Para que se muestre como un bloque en el lado derecho del artículo */
 		float: right;
 		width: 29%;
+		/* Máximo y mínimo tamaño de la imagen */
 		min-width: 150px;
 		max-width: 345px;
 		padding-left: 20px;
@@ -135,7 +159,7 @@ main {
 	
 	.proyectos {
 		display: flex;
-		justify-content: space-around; /*Separamos las 3 imágenes*/
+		justify-content: space-around; /* Separamos las 3 imágenes */
 	}
 
 	.proyectos img {
@@ -158,10 +182,6 @@ main {
 		min-width: 150px;
 		border-radius: 50px;
 		
-	}
-	
-	.equipos img {
-		width: 50px;
 	}
 	
 	.rift img {
@@ -205,22 +225,21 @@ main {
 		min-width: 50px;
 	}
 	
-/*Le damos formato al enlace de la página SMASH*/
+/* Le damos formato al enlace de la página SMASH */
 .enlaceSmash {
 	color: #333;
 	font-weight: bold;
 	text-decoration: none;
 }
 	
-/*Definimos el tamaño del video y lo centramos*/
+/* Definimos el tamaño del video y lo centramos */
 .videoRPL {
-	width: 560px ; 
-	height: 315px; 
+	width: 560px;  
 	margin: auto;
 	display: block;
 }
 	
-/*Le damos formato a la tabla*/
+/* Le damos formato a la tabla */
 .equipos {
 	width: 50%;
 	border-style: groove;
@@ -238,13 +257,18 @@ main {
 		margin-bottom: 10px;
 	}
 
-/*Section de la página UNETE*/	
+	.equipos img {
+		width: 50px;
+	}
+
+/* Section de la página UNETE */	
 .cartelContenedor {
 	background-color: #222220;
 	color: white;
 	text-decoration: none;
 	font-size: 1.2rem;
 	font-family: Verdana; 
+	border: none;
 }
 
 	.cartelContenedor p {
@@ -270,18 +294,23 @@ main {
 		padding-left: 10px;
 	}
 
-/*Aside de la página, que sera fijo y tendra imágenes con enlace a las redes sociales*/
+/* Aside de la página, que sera fijo y tendra imágenes con enlace a las redes sociales */
 aside {
 	font-family: Verdana;
 	text-align: center;
-	display: block;
+	display: block; /* Lo mostramos como bloque para quede a la derecha */
 	position: fixed;
-	margin: 20px 5px 5px 73.5%;
-	padding: 8px;
 	color:white;
 	background-color:#222220;
 	width: 24%;
+	/* Formato de border */
+	border-style: solid;
+	border-color: #a2182f;
 	border-radius: 18px;
+	/* Formato de margin */
+	margin: 20px 5px 5px 73.5%;
+	/* Formato de padding */
+	padding: 8px;
 }
 
 	aside h1 {
@@ -300,37 +329,75 @@ aside {
 		width: 20%;
 		min-width: 30px;
 		max-width: 80px;
+		-webkit-transition: -webkit-transform 1s ease-out;
+		-moz-transition: -moz-transform 1s ease-out;
+		transition: transform 1s ease-out;
 	}
 
-/*Hacemos que el pie de página siempre aparezca al final y le damos formato*/
+	/* Rotar imagen al pasar el ratón por encima */
+	.redes img:hover {
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	transform: rotate(360deg);
+	}
+
+/* Hacemos que el pie de página siempre aparezca al final y le damos formato */
 footer {
+	/* Formato de content */
 	font-family: Verdana;
 	font-style: italic;
-	margin-left: 32%;
-	margin-right: 32%;
 	text-align: center;
 	clear: both; /*Para que el elemento no este al lado de flotantes y aparezca debajo de todo*/
-	padding: 20px;
 	color: white;
 	background-color: #222220;
+	/* Formato de border */
+	border-style: solid;
+	border-color: #a2182f;
 	border-radius: 18px;
+	/* Formato de margin */
+	margin-left: 32%;
+	margin-right: 32%;
+	/* Formato de padding */
+	padding: 20px;
 }
 
-/*Menu desplegado par para moviles*/
-#menu:checked ~ nav { /*Especificamos que el checkbox esté pulsado para mostrar el nav*/
+/* Damos formato al formulario */
+.input {
+	width: 72px;
+	display: inline-block;
+	margin-left: 10px;
+  }
+
+#submit {
+	padding: 8px 16px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	display: block;
+	color: #fff;
+	background-color: #851b2b;
+	cursor: pointer;
+	transition: all 0.4s linear; /* Efecto al pasar encima del botón */
+  }
+
+  #submit:hover {
+	background-color: #c91e3a;
+  }  
+
+/* Menu desplegado par para moviles */
+#menu:checked ~ nav { /* Especificamos que el checkbox esté pulsado para mostrar el nav */
 	display: block;
 	margin-top: -15px;
 	width: 100%;
 }
 
-	/*Botón que solo se mostrara en moviles*/
+	/* Botón que solo se mostrara en moviles */
 	.boton { 
 		float: right;
 		margin: 35px 30px;
 		display: none;
 	}
 
-	/*Con esto creamos una línea del botón*/
+	/* Con esto creamos una línea del botón */
 	.boton div { 
 		height: 5px;
 		width: 30px;
@@ -338,7 +405,7 @@ footer {
 		position: relative;
 	}
 
-	/*Con esto creamos las otras dos líneas del botón, formando el botón completo*/
+	/* Con esto creamos las otras dos líneas del botón, formando el botón completo */
 	.boton div::before, .boton div::after {
 		background-color: #851b2b;
 		content: '';
@@ -356,15 +423,15 @@ footer {
 		top: -10px;
 	}
 
-/*No queremos que el checkbox se vea en la pagina si no es para moviles*/
+/* No queremos que el checkbox se vea en la pagina si no es para moviles */
 #menu { 
 	display: none;
 }
 
-/*Con esto haremos la página responsive, al llegar a cierto tamaño, la página se mostrará en otro formato para móviles*/
+/* Con esto haremos la página responsive, al llegar a cierto tamaño, la página se mostrará en otro formato para móviles */
 @media (max-width: 1050px) {
 	
-	/*Haremos que el encabezado cuadre con el checkbox*/
+	/* Haremos que el encabezado cuadre con el checkbox */
 	header {
 		display: block;
 		border-radius: 0;
@@ -376,17 +443,17 @@ footer {
 		width: 159px;
 	}
 	
-	/*Mostramos el botón creado*/
+	/* Mostramos el botón creado */
 	.boton { 
 		display: block;
 	}
 	
-	/*Quitamos el navegador que sale en la página completa y lo sustituimos por el botón*/
+	/* Quitamos el navegador que sale en la página completa y lo sustituimos por el botón */
 	nav { 
 		display: none;
 	}
 	
-	/*Le damos otro formato al navegador de botón, mas adecuado para verlo en móvil*/
+	/* Le damos otro formato al navegador de botón, mas adecuado para verlo en móvil */
 	nav ul {
 		background-color: #222220;
 		padding-top: 8px;
@@ -402,14 +469,14 @@ footer {
 		padding:1rem;
 	}
 
-	/*Extendemos el section a toda la pagina en version móvil*/
+	/* Extendemos el section a toda la pagina en version móvil */
 	section {
 		width: 100%;
 		margin: 0px 0px 20px 0px;
 		padding: 0;
 	}
 
-	/*Mostramos los carteles de la página UNETE uno encima del otro*/
+	/* Mostramos los carteles de la página UNETE uno encima del otro */
 	.cartel {
 		display: block;
 	}
@@ -421,13 +488,13 @@ footer {
 		margin: auto;
 	}
 	
-	/*El video se mostrará en todo el ancho de la pantalla*/
+	/* El video se mostrará en todo el ancho de la pantalla */
 	.videoRPL {
 		width: 100% ; 
 		max-width: 565px;
 	}
 	
-	/*Hacemos que el aside se vea debajo del section, más acorde con la version móvil*/
+	/* Hacemos que el aside se vea debajo del section, más acorde con la version móvil */
 	aside {
 		clear: both;
 		position: static;
@@ -436,9 +503,15 @@ footer {
 		width: 100%;	
 	}
 	
-	/*El footer se mostrará en todo el ancho de la página, formato más acorde con la version móvil*/
+	/* El footer se mostrará en todo el ancho de la página, formato más acorde con la version móvil */
 	footer {
 		margin: 20px 0px 0px 0px;
+	}
+
+	/* El text area ocupará todo la mitad */
+	textarea {
+		width: 100%;
+		max-width: 400px
 	}
 	
 }
